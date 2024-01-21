@@ -1,20 +1,23 @@
 update() 
 document.querySelector('.notification__form button').addEventListener('click',
 function(){
-    let time = document.querySelector('.notification__form input').value;
+    let tim = document.querySelector('.notification__form input').value;
   
     // let message = document.querySelector('.notification__form textarea').value;
 
      
     let summ = document.querySelector('.prof').value;
-
+    
+    
    
     let dat = document.getElementById('dat');
     let datt = dat.value.split('-').reverse().join('.') ;
+    time = tim +' - '+ datt
+
 
     let info = document.querySelector('.notification__info');
 
-    if(!time ){
+    if(!tim ){
         info.textContent = 'Укажите заявку'
         info.style.opacity = 1
         setTimeout(() => {
@@ -25,7 +28,7 @@ function(){
         },3000)
         return
     }
-    localStorage.setItem(time,summ,datt)
+    localStorage.setItem(time,summ)
   
     update() 
 } )
