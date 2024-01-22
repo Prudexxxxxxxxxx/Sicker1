@@ -43,6 +43,13 @@
 
         
         <div class="knopoc1">
+
+          <div class="popup" onclick="myFunction0()"> <button>Статус заявки</button> 
+            <span class="popuptext" id="myPopup0"> 
+             <img src="/photo_2024-01-22_14-38-14.jpg" alt="">
+        </span>
+          </div>
+
             <div class="popup" onclick="myFunction()"> <button>Дом не подключен</button> 
                 <span class="popuptext" id="myPopup">
                     &ensp;&ensp; К сожалению, возможность подключить проводной интернет по вашему адресу отсутствует. Подключение вашего дома к сети в ближайшее время не планируется. Подскажите, пожалуйста, возможно, ваш дом стоит на пересечении двух улиц? <br> 
@@ -408,7 +415,13 @@ document.getElementById('clock').innerHTML = hours + ':' + minutes + ':' + secon
 }
 setInterval(clock, 1000);
 clock();</script>
-
+  
+  <script>
+    function myFunction0() {
+      var popup0 = document.getElementById("myPopup0");
+      popup0.classList.toggle("show");
+    }
+    </script>
 
  <script>
     // Когда пользователь нажимает на <div>, откройте всплывающее окно
